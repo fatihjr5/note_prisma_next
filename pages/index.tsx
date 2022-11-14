@@ -71,8 +71,8 @@ const Home = ({notes}: Notes) => {
   return (
     <div className="flex flex-col space-y-2 w-8/12 mx-auto mt-16">
       <h1 className="text-center font-bold text-4xl text-white mb-20">CRUD Nextjs With Prisma</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-start justify-center">
-        <form onSubmit={e => {e.preventDefault(), handleSubmit(form)}} className="w-96 space-y-6 border border-white p-6 rounded-xl flex flex-col items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-start justify-center lg:gap-x-10 lg:gap-y-0 gap-y-10">
+        <form onSubmit={e => {e.preventDefault(), handleSubmit(form)}} className="w-full space-y-6 border border-white p-6 rounded-xl flex flex-col items-stretch">
           <input className="border border-gray-500 rounded-md bg-transparent text-white placeholder:text-gray-200 pl-2" type="text" placeholder="title" value={form.title} onChange={e => setForm({...form, title: e.target.value})}/>
           <textarea className="border border-gray-500 rounded-md bg-transparent text-white placeholder:text-gray-200 pl-2" placeholder="content" value={form.content} onChange={e => setForm({...form, content: e.target.value})}/>
           <button type="submit" className="w-full bg-blue-700 text-white rounded-xl py-2">Add</button>
